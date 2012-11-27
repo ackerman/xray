@@ -1,0 +1,4 @@
+name = X-Ray
+description = Module from The Definitive Guide to Drupal 7 for seeing into the guts of your installation
+package = Development
+core = 7.x

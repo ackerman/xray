@@ -1,0 +1,28 @@
+<?php
+/**
+ * @file
+ *  Helps site builders and module developers investigate a site.
+ */
+
+/**
+ * Implements hook_form_alter() to show each form's indentifier.
+ *
+ * More description after an empty line.
+ */
+function xray_form_alter(&$form, &$form_state, $form_id) {
+  $form['xray_display_form_id'] = array(
+    '#type' => 'item',
+    '#title' => t('Form ID'),
+    '#markup' => $form_id,
+    '#weight' => -100,
+  );
+}
+
+/**
+ * Implements hook_help().
+ */
+function xray_help($path, $arg) {
+  if ($path == 'admin/structure') {
+    return t('This site has stuff!');
+  }
+}
